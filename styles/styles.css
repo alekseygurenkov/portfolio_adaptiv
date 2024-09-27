@@ -28,6 +28,16 @@
     padding: 10px 20px;
 }
 
+.main {
+    margin: 0 auto;
+}
+
+.paragraph {
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 30px;
+}
+
 
 
 @media (max-width: 1199px) {
