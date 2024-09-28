@@ -1,3 +1,9 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
 .container {
     width: 960px;
     margin: 0 auto;
@@ -36,6 +42,44 @@
     margin-bottom: 20px;
     font-size: 22px;
     line-height: 30px;
+}
+
+.about-us {
+        padding: 20px;
+        margin: 20px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h2 {
+    color: #333; /* Цвет заголовка */
+    font-size: 2em; /* Размер шрифта заголовка */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+.about-us h3 {
+    color: #444; /* Цвет подзаголовка */
+    font-size: 1.5em; /* Размер шрифта подзаголовка */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.about-us p {
+    color: #667; /* Цвет текста */
+    line-height: 1.6; /* Междустрочный интервал */
+}
+
+.about-us ul {
+    list-style-type: disc; /* Тип маркера для списка */
+    margin-left: 20px; /* Отступ слева */
+}
+
+.about-us ul li {
+    margin-bottom: 10px; /* Отступ снизу для пунктов списка */
+}
+
+.about-us strong {
+    color: #000; /* Цвет текста для выделения */
 }
 
 
