@@ -1,0 +1,59 @@
+.full-width-button {
+    margin-top: 90px;
+    display: block;
+    width: 100%;
+    line-height: 100px;
+    border: 1px solid #AD1818;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #fff;
+    color: #AD1818;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.full-width-button:hover {
+    background-color: #AD1818;
+    color: #fff;
+}
+
+.full-width-button_small {
+    margin-top: 80px;
+    line-height: 63px;
+    font-size: 20px;
+}
+
+.full-width-button_inverted {
+    background-color: #AD1818;
+    color: #fff;
+}
+
+.full-width-button_inverted:hover {
+    background-color: #fff;
+    color: #AD1818;
+}
+
+@media (max-width: 1199px) {
+    .full-width-button {
+        margin-top: 90px;
+    }
+
+    .full-width-button_small {
+        margin-top: 80px;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .full-width-button {
+        margin-top: 90px;
+        line-height: 100px;
+        font-size: 22px;
+    }
+
+    .full-width-button_small {
+        margin-top: 80px;
+    }
+
+}
