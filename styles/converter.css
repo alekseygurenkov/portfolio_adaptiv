@@ -1,0 +1,14 @@
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.converter-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+}
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
