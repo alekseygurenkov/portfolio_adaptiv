@@ -2,6 +2,7 @@
 @import "./input.css";
 @import "./btn.css";
 @import "./counter.css";
+@import "./converter.css";
 
 body {
     font-family: Arial, sans-serif;

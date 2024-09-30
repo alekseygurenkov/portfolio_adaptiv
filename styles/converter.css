@@ -1,14 +1,42 @@
-input {
+/* input {
     padding: 10px;
     font-size: 16px;
     margin-bottom: 10px;
-}
-.converter-btn {
+} */
+/* .converter-btn {
     padding: 10px 15px;
     font-size: 16px;
-}
+} */
 .result {
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
 }
+
+.number-input {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    line-height: 34px;
+    border: none;
+    border-bottom: 1px solid black;
+    width: calc(30%-10px);
+}
+
+.converter-btn {
+    display: block;
+    width: calc(70%-10px);
+    border: 1px solid #AD1818;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #fff;
+    color: #AD1818;
+    cursor: pointer;
+
+    margin-top: 80px;
+    line-height: 63px;
+    font-size: 20px;
+}
+
