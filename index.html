@@ -111,6 +111,18 @@
                     <div class="result" id="result"></div>
             </section>
 
+            <section class="counter-box">
+                <h1>Калькулятор площади прямоугольника</h1>
+                <label for="width">Ширина:</label>
+                <input class="calc" type="number" id="width" placeholder="Введите ширину" required>
+                <br>
+                <label for="height">Высота:</label>
+                <input class="calc" type="number" id="height" placeholder="Введите высоту" required>
+                <br>
+                <button onclick="calculateArea()">Посчитать площадь</button>
+                <h2 class="result_area_calculator" id="result_area_calculator"></h2>
+            </section>
+
 
             <!-- <section class="counter-box">
                 <h1>Конвертер чисел и десятичных дробей в слова</h1>
@@ -171,6 +183,7 @@
     <script src="popup.js"></script>
     <script src="counter.js"></script>
     <script src="converter.js"></script>
+    <script src="area_calculator.js"></script>
     <!-- <script src="converter2.js"></script> -->
 </body>
 </html>

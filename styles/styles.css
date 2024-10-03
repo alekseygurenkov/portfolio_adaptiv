@@ -3,6 +3,7 @@
 @import "./btn.css";
 @import "./counter.css";
 @import "./converter.css";
+@import "./area_calculator.css";
 
 body {
     font-family: Arial, sans-serif;
