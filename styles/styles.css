@@ -4,6 +4,7 @@
 @import "./counter.css";
 @import "./converter.css";
 @import "./area_calculator.css";
+@import "./calculateDate.css";
 
 body {
     font-family: Arial, sans-serif;
