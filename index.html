@@ -131,6 +131,20 @@
                 <p class="result-date" id="result-date"></p>
             </section>
 
+            <section class="counter-box">
+                <div class="container-nds">
+                    <h1 class="nds-h1">Калькулятор НДС</h1>
+                    <label class="label-nds" for="amountInput">Введите сумму:</label>
+                    <input class="input-nds" type="number" id="amountInput" placeholder="Сумма" required>
+                    
+                    <label class="label-nds" for="vatRate">Ставка НДС (%):</label>
+                    <input class="input-nds" type="number" id="vatRate" value="20" required>
+                    <button class="nds-btn" id="calculateBtn">Начислить НДС</button>
+                    <button class="nds-btn" id="excludeBtn">Выделить НДС</button>
+                    <p class="result-nds" id="result-nds"></p>
+                </div>
+            </section>
+
 
             <!-- <section class="counter-box">
                 <h1>Конвертер чисел и десятичных дробей в слова</h1>
@@ -193,6 +207,7 @@
     <script src="converter.js"></script>
     <script src="area_calculator.js"></script>
     <script src="calculateDate.js"></script>
+    <script src="nds-calculeitor.js"></script>
     <!-- <script src="converter2.js"></script> -->
 </body>
 </html>

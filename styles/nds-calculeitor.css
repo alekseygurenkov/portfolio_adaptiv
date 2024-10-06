@@ -1,0 +1,47 @@
+.container-nds {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.nds-h1 {
+    color: #333;
+    font-size: 32px;
+    line-height: 43px;
+}
+
+.label-nds {
+    display: block;
+    margin: 10px 0 5px;
+}
+.input-nds {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.nds-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: calc(50%-10px);
+}
+.nds-btn:last-child {
+    margin-right: 0;
+    background: #007bff;
+}
+.nds-btn:hover {
+    opacity: 0.9;
+}
+.result-nds {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
