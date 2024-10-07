@@ -116,15 +116,17 @@
             </section>
 
             <section class="counter-box">
-                <h1>Калькулятор площади прямоугольника</h1>
-                <label for="width">Ширина:</label>
-                <input class="calc" type="number" id="width" placeholder="Введите ширину" required>
-                <br>
-                <label for="height">Высота:</label>
-                <input class="calc" type="number" id="height" placeholder="Введите высоту" required>
-                <br>
-                <button class="area_calculator-btn" onclick="calculateArea()">Посчитать площадь</button>
-                <h2 class="result_area_calculator" id="result_area_calculator"></h2>
+                <div class="container-area">
+                    <h1 class="area-h1">Калькулятор площади прямоугольника</h1>
+                    <label class="label-area" for="width">Ширина:</label>
+                    <input class="area_input" type="number" id="width" placeholder="Введите ширину" required>
+                    <br>
+                    <label class="label-area" for="height">Высота:</label>
+                    <input class="area_input" type="number" id="height" placeholder="Введите высоту" required>
+                    <br>
+                    <button class="area_calculator-btn" onclick="calculateArea()">Посчитать площадь</button>
+                    <h2 class="result_area_calculator" id="result_area_calculator"></h2>
+                </div>
             </section>
 
             <section class="counter-box">
