@@ -1,4 +1,11 @@
-.title-input {
+.post-title-input {
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.post-text-input {
     display: block;
     box-sizing: border-box;
     margin-bottom: 20px;
