@@ -1,3 +1,9 @@
+.post-box {
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+
 .post-title-input {
     display: block;
     box-sizing: border-box;
@@ -22,5 +28,13 @@
 .row {
     display: flex;
     gap: 30px;
+    justify-content: center;
 }
+
+.post-h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    line-height: 32px;
+}   
 
