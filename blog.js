@@ -1,19 +1,16 @@
-let post = {
-    title: '',
-    text: '',
-};
+const posts = [];
 
 const postTitleInputNode = document.querySelector('.js-post-title-input');
 const postTextInputNode = document.querySelector('.js-post-text-input');
-const newPostBtnNode = document.querySelector('.js-new-posr-btn');
+const newPostBtnNode = document.querySelector('.js-new-post-btn');
 const postsNode = document.querySelector('.js-posts');
 
 newPostBtnNode.addEventListener('click', function() {
     const postFromUser = getPostFromUser();
     
-    setPost(postFromUser);
+    addPost(postFromUser);
 
-    renderPost();
+    renderPosts();
 });
 
 function getPostFromUser() {
@@ -26,21 +23,31 @@ function getPostFromUser() {
     };
 }
 
-function setPost(newPost) {
-    post = newPost;
+function addPost({ title, text}) {
+    posts.push({
+        title: title,
+        text: text
+    });
 }
 
-function getPost() {
-    return post;
+function getPosts() {
+    return posts;
 }
 
-function renderPost() {
-    const postHTML = `
+function renderPosts() {
+    const posts = getPosts();
+
+    let postsHTML = '';
+
+    posts.forEach(post => {
+        postsHTML+= `
     <div class='post'>
         <p class='post__title'>${post.title}</p>
         <p class='post__text'>${post.text}</p>
     </div>
     `;
+        
+    });
 
-    postsNode.innerHTML = postHTML;
+    postsNode.innerHTML = postsHTML;
 }
