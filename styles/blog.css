@@ -71,4 +71,11 @@
     text-align: left;
 }
 
+.validationMessage {
+    color: red;
+    margin-top: 20px;
+}
 
+.validationMessage_hidden {
+    display: none;
+}
