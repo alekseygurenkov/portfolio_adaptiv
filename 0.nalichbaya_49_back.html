@@ -1,0 +1,67 @@
+<!-- <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF на сайте</title>
+</head>
+<body>
+    <h1>Встраивание PDF с помощью iframe</h1>
+    <iframe src="resources/plan.pdf" width="100%" height="600px"></iframe>
+</body>
+</html> -->
+
+
+<!-- Прошлый вариант кода -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF как картинка</title>
+    <style>
+        #pdf-canvas {
+            border: 1px solid black;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>PDF как картинка</h1>
+    <canvas id="pdf-canvas"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script>
+        const pdfUrl = 'resources/plan.pdf'; // Ваш PDF файл
+        const canvas = document.getElementById('pdf-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Инициализация PDF.js
+        pdfjsLib.getDocument(pdfUrl).promise.then(function(pdf) {
+            // Получаем первую страницу PDF
+            pdf.getPage(1).then(function(page) {
+                const scale = 3; // Масштабирование для рендеринга
+                const viewport = page.getViewport({ scale: scale });
+
+                // Устанавливаем размеры canvas под размер PDF страницы
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                // Рендерим страницу в canvas
+                const renderContext = {
+                    canvasContext: ctx,
+                    viewport: viewport
+                };
+                page.render(renderContext).promise.then(function() {
+                    console.log('Страница PDF успешно отрендерена');
+                });
+            });
+        });
+    </script>
+</body>
+</html> -->
+
+<!-- Прошлый вариант кода -->

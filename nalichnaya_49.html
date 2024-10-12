@@ -1,47 +1,43 @@
-<!-- <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF на сайте</title>
-</head>
-<body>
-    <h1>Встраивание PDF с помощью iframe</h1>
-    <iframe src="resources/plan.pdf" width="100%" height="600px"></iframe>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF как картинка</title>
+    <title>PDF с кликабельными ссылками</title>
     <style>
+        #pdf-container {
+            position: relative;
+        }
+
         #pdf-canvas {
             border: 1px solid black;
-            width: 100%;
-            height: auto;
+        }
+
+        .pdf-link {
+            position: absolute;
+            border: 2px solid rgba(0, 0, 255, 0.3);
+            background-color: rgba(0, 0, 255, 0.1);
         }
     </style>
 </head>
 <body>
-    <h1>PDF как картинка</h1>
-    <p>Рендеринг pdf при помощи библиотеки PDF.js</p>
-    <canvas id="pdf-canvas"></canvas>
+    <h1>PDF с кликабельными ссылками</h1>
+    <div id="pdf-container">
+        <canvas id="pdf-canvas"></canvas>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
     <script>
         const pdfUrl = 'resources/plan.pdf'; // Ваш PDF файл
         const canvas = document.getElementById('pdf-canvas');
-        const ctx = canvas.getContext('2d');
-        
+        const context = canvas.getContext('2d');
+        const container = document.getElementById('pdf-container');
+
         // Инициализация PDF.js
         pdfjsLib.getDocument(pdfUrl).promise.then(function(pdf) {
-            // Получаем первую страницу PDF
+            // Рендерим первую страницу
             pdf.getPage(1).then(function(page) {
-                const scale = 3; // Масштабирование для рендеринга
+                const scale = 2; // Масштабирование для рендеринга
                 const viewport = page.getViewport({ scale: scale });
 
                 // Устанавливаем размеры canvas под размер PDF страницы
@@ -50,15 +46,46 @@
 
                 // Рендерим страницу в canvas
                 const renderContext = {
-                    canvasContext: ctx,
+                    canvasContext: context,
                     viewport: viewport
                 };
                 page.render(renderContext).promise.then(function() {
-                    console.log('Страница PDF успешно отрендерена');
+                    console.log('Страница отрендерена');
+                });
+
+                // Извлекаем аннотации (ссылки и другие элементы)
+                page.getAnnotations().then(function(annotationsData) {
+                    annotationsData.forEach(function(annotation) {
+                        if (annotation.subtype === 'Link' && annotation.url) {
+                            const link = document.createElement('a');
+                            link.href = annotation.url;
+                            link.textContent = annotation.url;
+                            link.target = '_blank';
+                            link.className = 'pdf-link';
+
+                            // Рассчитываем позиции и размеры ссылки
+                            const rect = annotation.rect;
+                            const transform = viewport.transform;
+                            const x = transform[4] + rect[0] * transform[0];
+                            const y = transform[5] + rect[1] * transform[3];
+                            const width = (rect[2] - rect[0]) * transform[0];
+                            const height = (rect[3] - rect[1]) * transform[3];
+
+                            // Устанавливаем позицию и размер для ссылки
+                            link.style.left = `${x}px`;
+                            link.style.top = `${y - height}px`; // Нужно скорректировать Y координату
+                            link.style.width = `${width}px`;
+                            link.style.height = `${height}px`;
+
+                            // Добавляем ссылку в контейнер
+                            container.appendChild(link);
+                        }
+                    });
                 });
             });
         });
     </script>
 </body>
 </html>
+
 
