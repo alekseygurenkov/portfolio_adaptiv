@@ -1,4 +1,7 @@
 const posts = [];
+const TITLE_VALIDATION_LIMIT = 10;
+const TEXT_VALIDATION_LIMIT = 20;
+
 
 const postTitleInputNode = document.querySelector('.js-post-title-input');
 const postTextInputNode = document.querySelector('.js-post-text-input');
@@ -14,13 +17,38 @@ newPostBtnNode.addEventListener('click', function() {
     renderPosts();
 });
 
-postTitleInputNode.addEventListener('input', function (event) {
-    const currentValue = event.target.value;
-    console.log('change', event.target.value);
-    if (currentValue.length > 100) {
-        console.log('error!!!');
-    }
+postTitleInputNode.addEventListener('input', function () {
+    validation()
 });
+
+postTextInputNode.addEventListener('input', function () {
+    validation()
+});
+
+// Одна функция на проверку и темы и поста
+
+function validation() {
+    const titleLen = postTitleInputNode.value.length;
+    const textLen = postTextInputNode.value.length;
+
+    if (titleLen > TITLE_VALIDATION_LIMIT) {
+        validationMessage.innerText = `Длина текста не должна превышать ${TITLE_VALIDATION_LIMIT} символов`;
+        validationMessage.classList.remove("validationMessage_hidden"); // сообщение скрыто remove
+
+        return;
+    }
+
+    if (textLen > TEXT_VALIDATION_LIMIT) {
+        validationMessage.innerText = `Длина текста не должна превышать ${TEXT_VALIDATION_LIMIT} символов`;
+        validationMessage.classList.remove("validationMessage_hidden"); // сообщение скрыто remove
+
+        return;
+    }
+
+    validationMessage.classList.add("validationMessage_hidden") // сообщение отображается add
+}
+
+// Одна функция на проверку и темы и поста
 
 function getPostFromUser() {
     const title = postTitleInputNode.value;
@@ -31,6 +59,8 @@ function getPostFromUser() {
         text: text,
     };
 }
+
+
 
 function addPost({ title, text}) {
     posts.push({
