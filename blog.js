@@ -63,7 +63,11 @@ function getPostFromUser() {
 
 
 function addPost({ title, text}) {
+    const currentDate = new Date();
+    const dt = `${currentDate.getHours()}:${currentDate.getMinutes()}`
+
     posts.push({
+        dt: dt,
         title: title,
         text: text
     });
@@ -81,6 +85,7 @@ function renderPosts() {
     posts.forEach(post => {
         postsHTML+= `
     <div class='post'>
+        <p class='post__date'>${post.dt}</p>
         <p class='post__title'>${post.title}</p>
         <p class='post__text'>${post.text}</p>
     </div>

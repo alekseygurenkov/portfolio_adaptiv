@@ -1,6 +1,6 @@
 .post-box {
     margin: 0 auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 
@@ -25,7 +25,7 @@
     display: block;
     width: 100%;
     line-height: 60px;
-    border: 1px solid #AD1818;
+    border: 1px solid #0094FF;
     text-decoration: none;
     text-align: center;
     background-color: #0094FF;
@@ -42,11 +42,11 @@
 
 .col {
     width: 500px;
-    border: 1px solid red;  
+    /* border: 1px solid red;   */
 }
 
 .post {
-    border: 1px solid rgb(16, 19, 186);  
+    /* border: 1px solid rgb(16, 19, 186);   */
     margin-bottom: 50px;
 }
 
@@ -79,3 +79,12 @@
 .validationMessage_hidden {
     display: none;
 }
+
+.post__title {
+    font-weight: 700;
+}
+
+.post__date {
+    color: green;
+}
+
