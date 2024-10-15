@@ -1,6 +1,6 @@
 const posts = [];
-const TITLE_VALIDATION_LIMIT = 10;
-const TEXT_VALIDATION_LIMIT = 20;
+const TITLE_VALIDATION_LIMIT = 50;
+const TEXT_VALIDATION_LIMIT = 250;
 
 
 const postTitleInputNode = document.querySelector('.js-post-title-input');
