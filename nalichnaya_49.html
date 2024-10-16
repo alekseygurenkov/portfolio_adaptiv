@@ -13,14 +13,19 @@
             padding-top: 30px;
         }
 
-        .box {
+        /* .box {
             margin: 0 auto;
-        }
+        } */
 
         .name {
             text-align: center;
             font-size: 24px;
             line-height: 30px;
+        } 
+        .paragraph {
+            text-align: center;
+            font-size: 14px;
+            line-height: 18px;
         } 
 
         #pdf-container {
@@ -35,12 +40,12 @@
             border: 1px solid red; /* Временная граница для видимости */
             background-color: rgba(255, 0, 0, 0.2); /* Полупрозрачный фон */
 
-            position: absolute;
-            border: 2px solid blue; /* Сделаем рамку заметной */
+            /*position: absolute;
             background-color: rgba(0, 0, 255, 0.3); /* Сделаем фон полупрозрачным */
-            color: white;
+            color: rgb(31, 3, 3);
             text-decoration: none;
-
+            font-size: 10px;
+            line-height: 14px;
         }
     </style>
 </head>
@@ -48,6 +53,7 @@
     <section class="container">
         <div class="box">
             <h1 class="name">PDF с кликабельными ссылками</h1>
+            <p class="paragraph">Рендеринг pdf файла в картинку через библиотеку pdf.js</p>
             <div id="pdf-container">
                 <canvas id="pdf-canvas"></canvas>
             </div>
@@ -65,7 +71,7 @@
         pdfjsLib.getDocument(pdfUrl).promise.then(function(pdf) {
             // Рендерим первую страницу
             pdf.getPage(1).then(function(page) {
-                const scale = 1.5; // Масштаб рендеринга
+                const scale = 2; // Масштаб рендеринга
                 const viewport = page.getViewport({ scale: scale });
                 canvas.height = viewport.height;
                 canvas.width = viewport.width;

@@ -53,9 +53,9 @@
 .post__title {
     color: rgb(0, 0, 0);
     font-family: Inter;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
-    line-height: 39px;
+    line-height: 28px;
     letter-spacing: 0%;
     text-align: left;
     margin-bottom: 15px;
@@ -64,9 +64,9 @@
 .post__text {
     color: rgb(0, 0, 0);
     font-family: Inter;
-    font-size: 25px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 20px;
     letter-spacing: 0%;
     text-align: left;
 }
@@ -88,3 +88,66 @@
     color: green;
 }
 
+/* Сочинил чат gpt */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+h2 {
+    color: #007BFF;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+p {
+    line-height: 1.6;
+    color: #555;
+}
+.info-block {
+    margin-bottom: 20px;
+}
+.info-block p {
+    margin: 5px 0;
+}
+.highlight {
+    font-weight: bold;
+    color: #333;
+}
+
+.styled-button {
+    background-color: #007BFF; /* Синий цвет, как заголовки */
+    color: #fff; /* Белый текст */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Плавный переход */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.styled-button:hover {
+    background-color: #0056b3; /* Темнее при наведении */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Более сильная тень при наведении */
+}
+
+.styled-button:active {
+    background-color: #004494; /* Еще темнее при нажатии */
+}
+
+
+/* Сочинил чат gpt */
