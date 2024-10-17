@@ -34,6 +34,25 @@
     color: #AD1818;
 }
 
+.btn-mini {
+    /* display: block; */
+    padding: 3px 5px 3px 5px;
+    font-size: 15px;
+    border: 1px solid #AD1818;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #AD1818;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btn-mini:hover {
+    background-color: #181bad;
+    border: 1px solid #181bad;
+}
+
 @media (max-width: 1199px) {
     .full-width-button {
         margin-top: 90px;
