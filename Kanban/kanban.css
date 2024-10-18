@@ -1,3 +1,11 @@
+.body_fixed {
+    overflow: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
 }
@@ -27,4 +35,34 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 3px;
     cursor: move;
+}
+
+.container {
+    width: 1150px;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: rgb(3, 33, 33);
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+
+}
+
+.nav__link {
+    display: block;
+    max-width: 300px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
 }
