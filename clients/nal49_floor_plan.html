@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <nav class="nav">
+                    <a class="nav__link" href="../index.html">На главную</a>
+                    <a class="nav__link" href="#project">Проекты</a>
+                    <a class="nav__link" href="#services">Услуги</a>
+                    <a class="nav__link" href="#contacts">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <body>
+        <h1>Интерактивная карта помещений</h1>
+        
+        <img src="../resources/nalichnaya_49_plan.jpg" alt="План здания" usemap="#plan-map" id="plan-image">
+    
+        <!-- Карта с областями-ссылками -->
+        <map class="plan-map" name="plan-map">
+            <!-- Прямоугольная область для помещения 1 -->
+            <area class="rect" shape="rect" coords="810,520,840,550" href="room1.html" alt="Помещение 1">
+            
+            <!-- Полигональная область для помещения 2 -->
+            <area shape="poly" coords="200,50,250,50,250,150,200,150" href="room2.html" alt="Помещение 2">
+            
+            <!-- Круглая область для помещения 3 -->
+            <area shape="circle" coords="350,100,50" href="room3.html" alt="Помещение 3">
+        </map>
+    
+        <script src="script.js"></script>
+    </body>
+</html>
