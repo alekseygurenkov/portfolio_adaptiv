@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Интерактивная карта</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="maps-svg.css">
+    
+</head>
+<body>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <nav class="nav">
+                <a class="nav__link" href="../index.html">На главную</a>
+                <a class="nav__link" href="#project">Проекты</a>
+                <a class="nav__link" href="#services">Услуги</a>
+                <a class="nav__link" href="#contacts">Контакты</a>
+            </nav>
+        </div>
+    </div>
+</footer>    
+
+<section class="container">
+    <h1 class="name">SVG кликабельные области</h1>
+    
+    <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+        <!-- Изображение фона -->
+        <image href="virustotal_ok_plan.svg" width="800" height="600" />
+    
+        <!-- Прямоугольная область -->
+        <a href="./clients-svg/room1.html">
+            <rect x="350" y="125" width="15" height="10" class="area" />
+        </a>
+        <a href="./clients-svg/room2.html">
+            <rect x="350" y="140" width="15" height="10" class="area" />
+        </a>
+        <a href="./clients-svg/room3.html">
+            <rect x="350" y="165" width="15" height="10" class="area" />
+        </a>
+        <a href="./clients-svg/room4.html">
+            <rect x="350" y="210" width="15" height="10" class="area" />
+        </a>
+    
+        <!-- Круглая область -->
+        <!-- <a href="room2.html">
+            <circle cx="350" cy="100" r="50" class="area" />
+        </a> -->
+    </svg>
+</section>
+
+</body>
+</html>

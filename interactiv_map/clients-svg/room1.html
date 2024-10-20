@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="clients.css">
+
+    <title>Информация о контрагенте</title>
+    
+</head>
+<body>
+    <footer class="footer">
+        <div class="container1">
+            <div class="footer-inner">
+                <nav class="nav">
+                    <a class="nav__link" href="../../index.html">На главную</a>
+                    <a class="nav__link" href="../maps-svg.html">Схема</a>
+                    <a class="nav__link" href="#services">Услуги</a>
+                    <a class="nav__link" href="#contacts">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </footer> 
+    <div class="container">
+        <h1>Информация о контрагенте</h1>
+
+        <div class="info-block">
+            <h2>Наименование контрагента</h2>
+            <p><span class="highlight">Компания:</span> ООО "Пример"</p>
+        </div>
+
+        <div class="info-block">
+            <h2>Юридический адрес</h2>
+            <p>г. Москва, ул. Примерная, д. 1, офис 10</p>
+        </div>
+
+        <div class="info-block">
+            <h2>Фактический адрес</h2>
+            <p>г. Москва, ул. Примерная, д. 1, офис 12</p>
+        </div>
+
+        <div class="info-block">
+            <h2>Контактная информация</h2>
+            <p><span class="highlight">Телефон:</span> +7 (495) 123-45-67</p>
+            <p><span class="highlight">Email:</span> example@example.com</p>
+            <p><span class="highlight">Сайт:</span> <a href="#">www.example.com</a></p>
+        </div>
+
+        <div class="info-block">
+            <h2>Описание</h2>
+            <p>Причесывают волоса на мудях</p>
+        </div>
+
+        <div class="info-block">
+            <h2>ИНН / КПП</h2>
+            <p><span class="highlight">ИНН:</span> 7701234567</p>
+            <p><span class="highlight">КПП:</span> 770301001</p>
+        </div>
+
+        <div class="info-block">
+            <h2>Номер договора / Дата / Цена договора</h2>
+            <p><span class="highlight">№:</span> 01-А/24</p>
+            <p><span class="highlight">От:</span> 01.07.24г.</p>
+            <p><span class="highlight">Ретроспектива:</span> 01.02.24г.</p>
+            <p><span class="highlight">Цена (в том числе НДС):</span> 12000</p>
+        </div>
+
+        <div class="info-block">
+            <h2>Банковские реквизиты</h2>
+            <p><span class="highlight">Банк:</span> ПАО "Пример Банк"</p>
+            <p><span class="highlight">Расчетный счет:</span> 40702810912345678901</p>
+            <p><span class="highlight">Корреспондентский счет:</span> 30101810900000000700</p>
+            <p><span class="highlight">БИК:</span> 044525700</p>
+        </div>
+
+        <div class="info-block">
+            <h2>Контактное лицо</h2>
+            <p><span class="highlight">ФИО:</span> Иванов Иван Иванович</p>
+            <p><span class="highlight">Должность:</span> Менеджер по работе с клиентами</p>
+            <p><span class="highlight">Телефон:</span> +7 (495) 987-65-43</p>
+            <p><span class="highlight">Email:</span> ivanov@example.com</p>
+        </div>
+
+        <div class="info-block">
+            <h2>Договорные условия</h2>
+            <p>Оплата по договору в течение 30 дней с момента получения счета. Доставка осуществляется в течение 5 рабочих дней.</p>
+        </div>
+
+        <div class="info-block">
+            <h2>Примечания</h2>
+            <p>Пинать, раз в квартал, могут не платить, любят потеряться</p>
+        </div>
+    </div>
+    <section class="container">
+        <div class="post-box">
+            <div class="row">
+                <div class="col">
+                    <h2>Комментарий</h2>
+
+                    <input 
+                        class="js-post-title-input post-title-input" 
+                        placeholder="Заголовок"
+                        type="text"
+                    />
+        
+                    <textarea
+                        class="js-post-text-input post-text-input"
+                        placeholder="Текст"
+                        type="text"
+                    ></textarea>
+                    
+                    <button class="js-new-post-btn styled-button">
+                        Опубликовать
+                    </button>
+
+
+                    <div 
+                        id="validationMessage" 
+                        class="validationMessage validationMessage_hidden">
+                        Длина заголовка не должна превышать 100 символов
+                    </div>
+                </div>
+                <div class="col">
+                    <h2>Лента</h2>
+                    <div class="js-posts posts">
+                        Лента пустая...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="clients.js"></script>
+</body>
+</html>
