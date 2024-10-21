@@ -35,6 +35,8 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 3px;
     cursor: move;
+    display: flex;
+    justify-content: space-between;
 }
 
 .container {
@@ -66,3 +68,26 @@ h2 {
     color: white;
     padding: 10px 20px;
 }
+
+
+.podrobnee-btn {
+    min-width: 100px;
+    font-family: 10px;
+    border: 0;
+    border-radius: 5px;
+    background: #4676d7;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .podrobnee-btn:hover {
+    background: #1d49aa;
+  }
+  
+  .podrobnee-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #cbd6ee;
+  }
