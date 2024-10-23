@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Встроенная Google Таблица</title>
+    <style>
+        /* Основные стили для страницы */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Контейнер для таблицы */
+        .table-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .google__table {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Заголовок страницы */
+        h1 {
+            text-align: center;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        /* Стили для iframe */
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 600px) {
+            .table-container {
+                padding: 10px;
+            }
+
+            iframe {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="table-container">
+        <h1>Встроенная Google Таблица</h1>
+        <div class="google__table">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQJpPhjiyLtHGAd-1sklBRwYTTZEol6d6Nk36hKRMsrK-ph_1NzUJiDeTGIFjKAkuLw6AV47sIdKIjG/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+            width="600" height="400"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
