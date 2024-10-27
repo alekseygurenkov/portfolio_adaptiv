@@ -78,3 +78,29 @@ body {
 #target {
     background-color: #e74c3c;
 }
+
+/* Калькулятор расходов expense */
+
+.status {
+    color: green;
+}
+
+.status_red {
+    color: red;
+}
+
+.container h1 {
+    color: #3498db;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.expense__box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+/* Калькулятор расходов expense */
