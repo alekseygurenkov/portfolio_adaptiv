@@ -103,4 +103,51 @@ body {
     margin: 0 auto;
 }
 
+.status {
+    color: green;
+}
+
+.status_red {
+    color: red;
+}
+
+/* Устанавливаем стиль для общего контейнера */
+.row {
+    display: flex; /* Устанавливаем горизонтальное расположение элементов */
+    justify-content: space-between; /* Пространство между колонками */
+    margin: 20px;
+}
+
+/* Стиль для колонок */
+.col {
+    width: 48%; /* Каждая колонка занимает примерно половину ширины */
+    padding: 20px;
+    box-sizing: border-box; /* Включаем padding в ширину */
+    border: 1px solid #ddd; /* Граница для разделения */
+    border-radius: 8px; /* Закругленные углы */
+}
+
+/* Стиль для заголовков */
+h1, h2 {
+    text-align: center;
+}
+
+/* Стили для других элементов */
+.button {
+    width: 50%; /* Растягиваем кнопку и поле ввода на всю ширину */
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.js-history {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 200px; /* Минимальная высота для области истории */
+    overflow-y: auto; /* Полоса прокрутки, если история длинная */
+}
+
+
 /* Калькулятор расходов expense */

@@ -1,6 +1,8 @@
 const LIMIT = 10000;
-
-const expenses = [];
+const CURRENCY = 'РУБ.';
+const STATUS_IN_LIMIT = 'все хорошо';
+const STATUS_OUT_OF_LIMIT = 'все плохо';
+const STATUS_OUT_OF_LIMIT_CLASSNAME = 'status_red';
 
 const inputNode = document.querySelector('.js-expense-input');
 const buttonNode = document.querySelector('.js-button');
@@ -9,50 +11,87 @@ const sumNode = document.querySelector('.js-sum');
 const limitNode = document.querySelector('.js-limit');
 const statusNode = document.querySelector('.js-status');
 
-limitNode.innerText = LIMIT;
+const expenses = [];
+
+init(expenses);
 
 buttonNode.addEventListener('click', function () {
-    // 1. Получаем значение из поля ввода
-    if(inputNode.value === '') {
-        return;
+    const expense = getExpanseFromUser();
+
+    if (!expense) {
+        return
+    }
+    trackExpanse(expense);
+
+    render(expenses);
+});
+
+
+function init(expenses) {
+    limitNode.innerText = LIMIT;
+    statusNode.innerText = STATUS_IN_LIMIT;
+    sumNode.innerText = calculateExpanses(expenses);
+};
+
+function trackExpanse(expense) {
+    expenses.push(expense);
+}
+
+function getExpanseFromUser() {
+    if(!inputNode.value) {
+        return null;
     }
 
-    const expense = parseInt(inputNode.value); // inputNode = константа, value - вывести, parseInt- преобразовнаие строки в число
+    const expense = parseInt(inputNode.value);
 
-    inputNode.value = '';    // обнуление значения после того как пользователь ввел данные
+    clearInput();
 
-    // 2. Сохраняем трату в список 
-    expenses.push(expense);
+    return expense;
+}
 
-    // console.log(expenses);
+function clearInput() {
+    inputNode.value = '';
+}
 
+function calculateExpanses(expenses) {
+    let sum = 0;
+
+    expenses.forEach(element => {
+        sum += element;
+    });
+
+    return sum;
+}
+
+function render(expenses) {
+    const sum = calculateExpanses(expenses);
+    
+    renderHistory(expenses);
+    renderSum(sum);
+    renderStatus(sum);
+}
+
+function renderHistory(expenses) {
     // 3. Выведем новый список трат
     let expensesListHTML = '';
 
     expenses.forEach(element => {
-        const elementHTML = `<li>${element} руб.</li>`;
-        expensesListHTML += elementHTML;
+        expensesListHTML += `<li>${element} ${CURRENCY}</li>`;
     });
 
     historyNode.innerHTML = `<ol>${expensesListHTML}</ol>`;
+}
 
-    // 4. Посчитать и вывести сумму
-
-    let sum = 0;
-
-    expenses.forEach(element => {
-        const elementHTML = `<li>${element} руб.</li>`;
-        sum += element;
-        console.log(sum);
-    });
-
+function renderSum(sum) {
     sumNode.innerText = sum;
+}
 
-    // 5. Сравнение с лимитом и вывод статуса
+function renderStatus(sum) {
     if(sum <= LIMIT) {
-        statusNode.innerText = 'все хорошо';
+        statusNode.innerText = STATUS_IN_LIMIT;
     } else {
-        statusNode.innerText = 'все плохо';
-        statusNode.classList.add('status_red'); // добавляем класс элементу, его стиль css прописываю в файле css оописываю его 
+        statusNode.innerText = STATUS_OUT_OF_LIMIT;
+
+        statusNode.classList.add(STATUS_OUT_OF_LIMIT_CLASSNAME); // добавляем класс элементу, его стиль css прописываю в файле css оописываю его 
     }
-});
+}
