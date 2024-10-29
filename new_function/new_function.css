@@ -1,5 +1,5 @@
 body {
-    background-color: aliceblue;
+    background-color: #f4f4f4;
 }
 
 .container {
@@ -54,6 +54,7 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: Arial, sans-serif;
+    padding-bottom: 20px;
 }
 
 #game-container {
@@ -77,6 +78,13 @@ body {
 
 #target {
     background-color: #e74c3c;
+    padding-bottom: 20px;
+}
+
+.score {
+    padding-top: 20px;
+    font-size: 25px;
+    line-height: 30px;
 }
 
 /* Калькулятор расходов expense */
@@ -94,6 +102,7 @@ body {
     font-size: 22px;
     line-height: 28px;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 .expense__box {
@@ -127,16 +136,18 @@ body {
     border-radius: 8px; /* Закругленные углы */
 }
 
-/* Стиль для заголовков */
-h1, h2 {
-    text-align: center;
-}
-
 /* Стили для других элементов */
 .button {
-    width: 50%; /* Растягиваем кнопку и поле ввода на всю ширину */
-    margin-top: 10px;
+    width: 100%; /* Растягиваем кнопку и поле ввода на всю ширину */
+    margin-top: 20px;
+    margin-bottom: 25px;
     padding: 10px;
+    font-size: 1em;
+}
+
+.expense-input {
+    width: 100%; /* Растягиваем кнопку и поле ввода на всю ширину */
+    margin-top: 10px;
     font-size: 1em;
 }
 

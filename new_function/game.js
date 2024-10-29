@@ -13,6 +13,7 @@ let playerX = 0;
 let playerY = 0;
 
 // Управление игроком
+// Попробовать переназначить клавиши, или как-то исправить скоролл вертикальный во вроемя нажатия стрелок
 document.addEventListener("keydown", (e) => {
     switch (e.key) {
         case "ArrowUp":
