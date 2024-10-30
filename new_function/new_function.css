@@ -1,3 +1,5 @@
+@import "../Kanban/kanban.css";
+
 body {
     background-color: #f4f4f4;
 }
@@ -6,7 +8,7 @@ body {
     padding-top: 20px;
     width: 1150px;
     margin: 0 auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .accordion {
@@ -48,7 +50,7 @@ body {
     text-align: center;
 }
 
-/* style.css */
+/* games style.css */
 .game {
     display: flex;
     flex-direction: column;
@@ -86,6 +88,8 @@ body {
     font-size: 25px;
     line-height: 30px;
 }
+/* games style.css */
+
 
 /* Калькулятор расходов expense */
 
@@ -112,8 +116,15 @@ body {
     margin: 0 auto;
 }
 
+.p_expense {
+    font-size: 22px;
+    line-height: 27px;
+}
+
 .status {
     color: green;
+    font-size: 22px;
+    line-height: 27px;
 }
 
 .status_red {
@@ -162,3 +173,118 @@ body {
 
 
 /* Калькулятор расходов expense */
+
+/* Блок с товарами */
+
+
+
+.container-item {
+    font-family: 'relevay';
+    background-color: #333;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-radius: 30px;
+}
+
+.container-item h1 {
+    color: #fff;
+}
+
+.item-box0 {
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #333;
+}
+
+.item {
+    width: 30%;
+   
+    
+}
+
+.item__text-wrapper {
+    padding: 24px;
+    background-color: #1b1b1b;
+    color: #fff;
+    border-radius: 0px 0px 32px 32px;
+}
+.item__image {
+    display: block;
+    width: 100%;
+    height: 418px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    
+}
+
+.item__title {
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+
+}
+.item__color {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 20px;
+
+}
+
+.item__price {
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    color: #f1f8ff;
+}
+
+.item__cart-btn {
+    width: 100%;
+    height: 66px;
+    background-color: #fff;
+    border-radius: 30px;
+    border: none;
+    font-family: 'releway';
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+/* Блок с товарами */
+
+/* Таблица */
+
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  } */
+  
+  .table {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Расстояние между строками */
+  }
+  
+  .row {
+    display: flex;
+    gap: 10px; /* Расстояние между ячейками */
+  }
+  
+  .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 128, 255, 0.2); /* Полупрозрачный цветной фон */
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px; /* Радиус углов */
+  }
+  
+/* Таблица */

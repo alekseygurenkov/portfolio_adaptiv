@@ -8,6 +8,16 @@
     <title>New function</title>
 </head>
 <body>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <nav class="nav">
+                    <a class="nav__link" href="../index.html">На главную</a>
+                    <a class="nav__link" href="./games.html">Games</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
     <div class="container">
         <h1>Выпадающее описание</h1>
         <div class="accordion">
@@ -53,7 +63,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <!-- <div class="container">
         <h1>Игра</h1>
         <div class="game">
             <div id="game-container">
@@ -62,7 +72,7 @@
             </div>
             <p class="score">Счет: <span id="score">0</span></p>
         </div>
-    </div>
+    </div> -->
 
     <div class="container">
 
@@ -72,20 +82,95 @@
                 <input class="js-expense-input expense-input"
                 type="number">
                 <button class="js-button button">Добавить</button>
-                <p>Лимит: <span class="js-limit"></span> руб.</p>
-                <p>Сумма: <span class="js-sum"></span> руб.</p>
-                <p>Статус: <span class="js-status status"></span></p>
+                <p class="p_expense">Лимит: <span class="js-limit limit"></span> руб.</p>
+                <p class="p_expense">Сумма: <span class="js-sum sum"></span> руб.</p>
+                <p class="p_expense">Статус: <span class="js-status status"></span></p>
             </div>
             <div class="col">
                 <h2>История</h2>
                 <div class="js-history"></div>
             </div>
         </div>
+    </div>
+
+    <div class="container container-item">
+
+            <h1>Блок с товарами</h1>
+            <div class="item-box0">
+                <div class="item">
+                    <img class="item__image" src="resources/room1.jpg" alt="room1">
+                    <div class="item__text-wrapper">
+                        <p class="item__title">iphoon 13pro</p>
+                        <p class="item__color">silver</p>
+                        <p class="item__price">130 000 p</p>
+                        <button class="item__cart-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="item__image" src="resources/room1.jpg" alt="room1">
+                    <div class="item__text-wrapper">
+                        <p class="item__title">iphoon 13pro</p>
+                        <p class="item__color">gold</p>
+                        <p class="item__price">110 000 p</p>
+                        <button class="item__cart-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="item__image" src="resources/room1.jpg" alt="room1">
+                    <div class="item__text-wrapper">
+                        <p class="item__title">iphoon 13pro</p>
+                        <p class="item__color">black</p>
+                        <p class="item__price">100 000 p</p>
+                        <button class="item__cart-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+
+    <div class="container">
+        <div class="table">
+            <div class="row">
+              <div class="cell">1</div>
+              <div class="cell">2</div>
+              <div class="cell">3</div>
+              <div class="cell">4</div>
+              <div class="cell">5</div>
+            </div>
+            <div class="row">
+              <div class="cell">6</div>
+              <div class="cell">7</div>
+              <div class="cell">8</div>
+              <div class="cell">9</div>
+              <div class="cell">10</div>
+            </div>
+            <div class="row">
+              <div class="cell">11</div>
+              <div class="cell">12</div>
+              <div class="cell">13</div>
+              <div class="cell">14</div>
+              <div class="cell">15</div>
+            </div>
+            <div class="row">
+              <div class="cell">16</div>
+              <div class="cell">17</div>
+              <div class="cell">18</div>
+              <div class="cell">19</div>
+              <div class="cell">20</div>
+            </div>
+            <div class="row">
+              <div class="cell">21</div>
+              <div class="cell">22</div>
+              <div class="cell">23</div>
+              <div class="cell">24</div>
+              <div class="cell">25</div>
+            </div>
+          </div>
+    </div>
+
 
     <script src="new_function.js"></script>
-    <script src="game.js"></script>
     <script src="expense.js"></script>
-    
 </body>
 </html>
 
