@@ -216,7 +216,6 @@ body {
     height: 418px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    
 }
 
 .item__title {
@@ -224,13 +223,11 @@ body {
     font-weight: 700;
     font-size: 28px;
     line-height: 33px;
-
 }
 .item__color {
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 20px;
-
 }
 
 .item__price {
@@ -272,6 +269,8 @@ body {
   .row {
     display: flex;
     gap: 10px; /* Расстояние между ячейками */
+    border: 1px solid red;
+    background-color: #e74c3c;
   }
   
   .cell {
@@ -285,6 +284,24 @@ body {
     font-size: 18px;
     font-weight: bold;
     border-radius: 5px; /* Радиус углов */
+    border: 1px solid blue;
   }
   
 /* Таблица */
+
+.btn_neon_box {
+    margin: 0 auto;
+}
+
+.neon-btn {
+    margin-top: 30px;
+    background-color: #3498db;
+    box-shadow: 0 0 5px cyan, 
+    0 0 25px cyan;
+}
+
+.neon-btn:hover {
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
+}
