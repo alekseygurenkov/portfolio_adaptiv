@@ -247,7 +247,13 @@ body {
     font-family: 'releway';
     font-size: 20px;
     font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+}
 
+.item__cart-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
 }
 
 /* Блок с товарами */
@@ -266,7 +272,7 @@ body {
     gap: 10px; /* Расстояние между строками */
   }
   
-  .row {
+  .row1 {
     display: flex;
     gap: 10px; /* Расстояние между ячейками */
     border: 1px solid red;
@@ -290,18 +296,47 @@ body {
 /* Таблица */
 
 .btn_neon_box {
-    margin: 0 auto;
+    padding: 45px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
 }
 
 .neon-btn {
-    margin-top: 30px;
+    padding: 15px 32px;
+    border-radius: 12px;
+    /* margin-top: 30px; */
     background-color: #3498db;
     box-shadow: 0 0 5px cyan, 
     0 0 25px cyan;
+    cursor: pointer;
 }
 
 .neon-btn:hover {
     box-shadow: 0 0 5px cyan,
     0 0 25px cyan, 0 0 50px cyan,
     0 0 100px cyan, 0 0 200px cyan;
+}
+
+.animated-btn-box {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.animated-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.animated-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
 }
