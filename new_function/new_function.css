@@ -266,6 +266,14 @@ body {
     padding: 0;
   } */
   
+  .table-box {
+    /* background-color: black; */
+    background-color: rgba(0, 128, 255, 0.2); /* Полупрозрачный цветной фон */
+    padding: 20px;
+    border-radius: 20px;
+    z-index: -10;
+  }
+
   .table {
     display: flex;
     flex-direction: column;
@@ -280,17 +288,18 @@ body {
   }
   
   .cell {
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
     /* width: 100px; */
     height: 100px;
-    background-color: rgba(0, 128, 255, 0.2); /* Полупрозрачный цветной фон */
-    color: #333;
+    background-color: black;
+    color: #fff;
     font-size: 18px;
     font-weight: bold;
     border-radius: 10px; /* Радиус углов */
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
   }
 
   .cell-1 {
@@ -303,6 +312,7 @@ body {
 
   .cell-3 {
     width: 40%;
+    text-align: center;
   }
   
 /* Таблица */
