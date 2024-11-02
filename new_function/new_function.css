@@ -275,29 +275,42 @@ body {
   .row1 {
     display: flex;
     gap: 10px; /* Расстояние между ячейками */
-    border: 1px solid red;
-    background-color: #e74c3c;
+    /* border: 1px solid red; */
+    /* background-color: #e74c3c; */
   }
   
   .cell {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
+    /* width: 100px; */
     height: 100px;
     background-color: rgba(0, 128, 255, 0.2); /* Полупрозрачный цветной фон */
     color: #333;
     font-size: 18px;
     font-weight: bold;
-    border-radius: 5px; /* Радиус углов */
+    border-radius: 10px; /* Радиус углов */
     border: 1px solid blue;
+  }
+
+  .cell-1 {
+    width: 20%;
+  }
+
+  .cell-2 {
+    width: 40%;
+  }
+
+  .cell-3 {
+    width: 40%;
   }
   
 /* Таблица */
 
 .btn_neon_box {
-    padding: 45px;
-    background-color: #333;
+    padding: 200px;
+    background-color: black;
+    border-radius: 30px;
     display: flex;
     justify-content: center;
 }
