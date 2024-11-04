@@ -366,13 +366,14 @@ body {
 }
 
 .animated-btn-box {
-    padding: 30px;
+    padding-bottom: 150px;
     display: flex;
     justify-content: center;
 }
 
 .animated-btn {
-    background-color: #4CAF50;
+    /* background-color: #4CAF50; */
+    background-color: #3498db;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -384,6 +385,11 @@ body {
 }
 
 .animated-btn:hover {
-    background-color: #45a049;
-    transform: scale(1.1);
+    /* background-color: #45a049; */
+    /* background-color: rgba(0, 128, 255, 0.2); */
+    background-color: 0 0 5px cyan;
+    transform: scale(1.2);
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
 }
