@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="rus">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <title>Футер</title>
+ 
+</head>
+
+<body>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <nav class="nav">
+                    <a class="nav__link" href="#about-us">О нас</a>
+                    <a class="nav__link" href="#project">Проекты</a>
+                    <a class="nav__link" href="#services">Услуги</a>
+                    <a class="nav__link" href="#contacts">Контакты</a>
+                    <a class="nav__link" href="./new_function/new_function.html">Новые функции</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <main class="main">
+        <div class="js-popup popup">
+            <div class="js-popup__content popup__content">
+                <button class="js-popup__close-btn popup__close-btn"></button>
+                <div class="order__title">Заказать услугу</div>
+                <div class="order__subtitle">
+                    Заполните форму, мы свяжемся с вами в течении суток
+                </div> 
+                <form class="order__form" autocomplete="on">
+                    <input 
+                    class="input order__input" 
+                    type="text" 
+                    name="name"
+                    placeholder="Имя"
+                    >
+                    <input
+                    class="input order__input"
+                    type="email"
+                    name="email"
+                    placeholder="Электронная почта"
+                    >
+                    <input
+                    class="input order__input"
+                    type="tel"
+                    name="phone"
+                    placeholder="Номер телефона"
+                    >
+                </form>
+                <button
+                    class="full-width-button full-width-button_inverted full-width-button_small">
+                    Отправить
+                </button> 
+            </div>
+        </div>
+
+
+        <div class="container">
+            <section class="about-us">
+                <h2 id="about-us">О нас</h2>
+                <p>Мы — команда профессионалов, увлечённых своей работой и стремящихся предоставлять нашим клиентам лучшие решения. С момента основания нашей компании в 2020 году, мы зарекомендовали себя как надежный партнер, предлагая высококачественные услуги в области ЖКХ.</p>
+                <h3>Наши ценности:</h3>
+                <ul>
+                    <li><strong>Качество</strong>: Мы стремимся к высокому стандарту в каждой задаче, которую выполняем.</li>
+                    <li><strong>Индивидуальный подход</strong>: Понимаем, что каждый клиент уникален, и разрабатываем решения, которые соответствуют вашим потребностям.</li>
+                    <li><strong>Инновации</strong>: Постоянно следим за последними трендами и технологиями, чтобы предлагать актуальные и эффективные решения.</li>
+                </ul>
+                <p>Наша цель — помочь вашему бизнесу расти и развиваться, предоставляя надежные и современные услуги, которые сделают вашу жизнь проще. Мы ценим доверие наших клиентов и всегда готовы к открытому диалогу.</p>
+    
+                <p>Свяжитесь с нами, и давайте обсудим, как мы можем помочь вам добиться успеха!</p>
+            </section>
+            
+            <section class="about-us">
+                <h2 id="project">Проекты</h2>
+                <p>Начиная с 2021 года мы смогли привлеч дополнительные денежные потоки на МКД, обеспечив собственникам этих домов возможность
+                    получать дополнительные высококачественные услуги, такие как видеонаблюдение, скуд, услуги консъерж сервиса и т.д. без дополнительных расходов
+                    со стороны собственников.
+                </p>
+                <h3>Наши проекты:</h3>
+                <ul>
+                    <li><strong>Наличная ул. 49</strong>
+                        <a class="btn-mini" href="./interactiv_map/maps-svg.html">plan svg</a>
+                        <a class="btn-mini" href="./Kanban/kanban.html">kanban</a>
+                        <a class="btn-mini" href="./Kanban/googledok.html">table</a>
+                        <!-- <a class="btn-mini" href="nalichnaya_49.html">схема</a> 
+                        <a class="btn-mini" href="./clients/nal49_floor_plan.html">floor plan</a> -->
+                        
+                        : Дополнительно на адрес привлечено порядка 5 руб., что позводило покрыть расходы на установку и эксплуатацию шлакбаума
+                    </li>
+                    <li><strong>Наличная ул. 51</strong>: Дополнительно на адрес привлечено порядка 5 руб., что позволило решить ряд проблем на адресе</li>
+                    <li><strong>Наличная ул. 40</strong>: Дополнительно на адрес привлечено порядка 5 руб., заменить входную группу во всех парадныз на современные дорогостоящие</li>
+                </ul>
+                <p>Наша цель — помочь вашему бизнесу расти и развиваться, предоставляя надежные и современные услуги, которые сделают вашу жизнь проще. Мы ценим доверие наших клиентов и всегда готовы к открытому диалогу.</p>
+    
+                <p>Свяжитесь с нами, и давайте обсудим, как мы можем помочь вам добиться успеха!</p>
+            </section>
+
+            <section class="counter-box">
+                <div class="counter">
+                    <div data-find="counterValue" class="counter__value"></div>
+                    <button id="addOnePoolButton" data-pools="1" class="counter__addButton">
+                        +1 Бассейн
+                    </button>
+                    <button id="addTwoPoolsButton" data-pools="2" class="counter__addButton">
+                        +2 Бассейна
+                    </button>
+                    <button id="resetButton" class="counter__resetButton">Сбросить</button>
+                </div>
+
+            </section>
+
+            <section class="counter-box">
+                <div class="container-numbers">
+                    <h1 class="numbers-h1">Конвертер чисел в слова</h1>
+                        <input class="number-input" type="number" id="numberInput" placeholder="Введите число" />
+                        <button class="converter-btn" id="convertButton">Конвертировать</button>
+                        <div class="result" id="result"></div>
+                </div>
+            </section>
+
+            <section class="counter-box">
+                <div class="container-area">
+                    <h1 class="area-h1">Калькулятор площади прямоугольника</h1>
+                    <label class="label-area" for="width">Ширина:</label>
+                    <input class="area_input" type="number" id="width" placeholder="Введите ширину" required>
+                    <br>
+                    <label class="label-area" for="height">Высота:</label>
+                    <input class="area_input" type="number" id="height" placeholder="Введите высоту" required>
+                    <br>
+                    <button class="area_calculator-btn" onclick="calculateArea()">Посчитать площадь</button>
+                    <h2 class="result_area_calculator" id="result_area_calculator"></h2>
+                </div>
+            </section>
+
+            <section class="counter-box">
+                <div class="container-data">
+                    <h1 class="date-h1">Калькулятор дат +11 мес</h1>
+                    <label class="label-data" for="dateInput">Введите дату (день/месяц/год):</label>
+                    <input class="dateInput" type="text" id="dateInput" placeholder="06/10/2024">
+                    <button class="date-btn" onclick="calculateDate()">Добавить 11 месяцев (-1 день)</button>
+                    <p class="result-date" id="result-date"></p>
+                </div>
+            </section>
+
+            <section class="counter-box">
+                <div class="container-nds">
+                    <h1 class="nds-h1">Калькулятор НДС</h1>
+                    <label class="label-nds" for="amountInput">Введите сумму:</label>
+                    <input class="input-nds" type="number" id="amountInput" placeholder="Сумма" required>
+                    
+                    <label class="label-nds" for="vatRate">Ставка НДС (%):</label>
+                    <input class="input-nds" type="number" id="vatRate" value="20" required>
+                    <button class="nds-btn" id="calculateBtn">Начислить НДС</button>
+                    <button class="nds-btn" id="excludeBtn">Выделить НДС</button>
+                    <p class="result-nds" id="result-nds"></p>
+                </div>
+            </section>
+            <!-- Блог -->
+            <section class="counter-box">
+                <div class="post-box">
+                    <h1 class="post-h1">Приложение блог</h1>
+                    <div class="row">
+                        <div class="col">
+                            <h2>Новый пост</h2>
+
+                            <input 
+                                class="js-post-title-input post-title-input" 
+                                placeholder="Заголовок"
+                                type="text"
+                            />
+                
+                            <textarea
+                                class="js-post-text-input post-text-input"
+                                placeholder="Текст"
+                                type="text"
+                            ></textarea>
+                            
+                            <button class="js-new-post-btn new-posr-btn">
+                                Опубликовать
+                            </button>
+
+
+                            <div 
+                                id="validationMessage" 
+                                class="validationMessage validationMessage_hidden">
+                                Длина заголовка не должна превышать 100 символов
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h2>Лента</h2>
+                            <div class="js-posts posts">
+                                Лента пустая...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <!-- <section class="counter-box">
+                <h1>Конвертер чисел и десятичных дробей в слова</h1>
+                    <input type="number" id="numberInput" placeholder="Введите число" />
+                    <button class="converter-btn" id="convertButton">Конвертировать</button>
+                    <div class="result" id="result"></div>
+            </section> -->
+
+            <section class="about-us">
+                <h2 id="services">Услуги</h2>
+                <ul>
+                    <li><strong>Работа с операторами связи</strong>: Мы стремимся к высокому стандарту в каждой задаче, которую выполняем.</li>
+                    <li><strong>Привлечение дополнительных доходов на адрес</strong>: Понимаем, что каждый клиент уникален, и разрабатываем решения, которые соответствуют вашим потребностям.</li>
+                    <li><strong>Инновации</strong>: Постоянно следим за последними трендами и технологиями, чтобы предлагать актуальные и эффективные решения.</li>
+                </ul>
+                <button class="js-btn full-width-button full-width-button_inverted">Заказать услуги</button>
+            </section>
+
+            <section class="contacts-section">
+                <h2 id="contacts">Контакты</h2>
+                <p>Если у вас есть вопросы, не стесняйтесь связаться с нами!</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Адрес</h3>
+                        <p>г. Москва, ул. Примерная, д. 1</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Телефон</h3>
+                        <p><a href="tel:+71234567890">+7 (123) 456-78-90</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@example.com">info@example.com</a></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <button id="scrollToTopBtn" title="Вверх">Вверх</button>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <nav class="nav">
+                    <a class="nav__link" href="">О Нас</a>
+                    <a class="nav__link" href="">Проекты</a>
+                    <a class="nav__link" href="">Услуги</a>
+                    <a class="nav__link" href="">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script src="popup.js"></script>
+    <script src="counter.js"></script>
+    <script src="converter.js"></script>
+    <script src="area_calculator.js"></script>
+    <script src="calculateDate.js"></script>
+    <script src="nds-calculeitor.js"></script>
+    <script src="blog.js"></script>
+    <script src="scrollToTopBtn.js"></script>
+    <!-- <script src="converter2.js"></script> -->
+</body>
+</html>
