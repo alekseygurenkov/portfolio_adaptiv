@@ -10,7 +10,7 @@
 }
 
 body {
-background: rgba(0, 0, 0, 0.2) url('bg-image.jpg') 
+background: rgba(0, 0, 0, 0.2) url('./resources/bg-image.jpeg') 
 center/cover no-repeat fixed;
 }
 
@@ -95,7 +95,7 @@ a:hover {
     flex-direction: column;
 }
 
-.imput-field {
+.input-field {
     width: 100%;
     padding: 0.5rem;
     border: 2px solid var(--primary-color);
@@ -113,8 +113,8 @@ a:hover {
     transition: 0.2s;
 }
 
-.imput-field:focus~.label,
-.imput-field:valid~.label {
+.input-field:focus~.label,
+.input-field:valid~.label {
     position: absolute;
     top: 0%;
     left: 0%;
@@ -137,6 +137,33 @@ a:hover {
     gap: 0.5rem;
 }
 
+.forgot {
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
+}
 
+/* кнопка логин */
+.input-login {
+    width: 100%;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 30px;
+    background: #ececec;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-login:hover {
+    background: var(--secondary-color);
+}
+
+.register {
+    text-align: center;
+}
+
+.register a {
+    font-weight: 500;
+}
 
 
