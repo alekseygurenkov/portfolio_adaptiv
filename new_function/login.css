@@ -69,5 +69,74 @@ a:hover {
     box-shadow: 15px 0 0 0 var(--primary-color);
 }
 
+.login-header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 30px;
+    height: 30px;
+    border-top-left-radius: 50%;
+    background: transparent;
+    box-shadow: -15px 0 0 0 var(--primary-color);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: clamp(0.5rem, 3vw, 3rem);
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    gap: 1rem;
+}
+
+.input-wrapper {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.imput-field {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 30px;
+    outline: none;
+    background: transparent;
+    color: var(--secondary-color);
+}
+
+.label {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    transition: 0.2s;
+}
+
+.imput-field:focus~.label,
+.imput-field:valid~.label {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    padding: 0 10px;
+    border-radius: 30px;
+    background-color: var(--primary-color);
+    color: black;
+}
+
+.icon {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+}
+
+.login-check {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
 
 
