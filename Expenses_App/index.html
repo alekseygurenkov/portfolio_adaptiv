@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расходы</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@400;700&display=swap" 
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <h1>Учет расходов</h1>
+    <div class="expenses">
+        <div class="expensesInput">
+            <div class="moneyInput rub">
+                <input
+                class="moneyInput__input"
+                type="number"
+                min="1"
+                id="expensesInput"
+                >
+            </div>
+        </div>
+
+        <button class="addButton" id="addButton">Добавить</button>
+
+        <div class="stats">
+            <div class="stats__limit">
+                <span class="label">Лимит:</span>
+                <span id="limitValue" class="rub">10000</span>
+            </div>
+            <div class="stats__total">
+                <span class="label">Всего:</span>
+                <span class="rub" id="totalValue">1350</span>
+            </div>
+            <div class="stats__status">
+                <span class="label">Статус:</span>
+                <span class="stats__statusText_positive" id="statusText">
+                    все хорошо
+                </span>
+            </div>
+        </div>
+
+        <div class="history">
+            <div class="history__title label">История</div>
+            <ol class="history__list">
+                <li class="rub">100</li>
+                <li class="rub">200</li>
+                <li class="rub">50</li>
+                <li class="rub">1000</li>
+            </ol>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
