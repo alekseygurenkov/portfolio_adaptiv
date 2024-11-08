@@ -28,7 +28,7 @@ ol {
     list-style-position: inside; /* в пределах блока ol */
 }
 
-label {
+.label {
     font-weight: 700;
 }
 
