@@ -28,7 +28,7 @@ ol {
     list-style-position: inside; /* в пределах блока ol */
 }
 
-.label {
+label {
     font-weight: 700;
 }
 
@@ -79,6 +79,18 @@ ol {
     color: #ffffff;
     background-color: #0094ff;
     border: none;
+}
+
+.clearButton {
+    width: 484px;
+    display: block;
+    padding: 11px 82px 8px 107px;
+    color: #ffffff;
+    background-color: #FF0000;
+    border: none;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 39px;
 }
 
 .stats {

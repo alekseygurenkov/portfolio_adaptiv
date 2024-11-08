@@ -1,97 +1,52 @@
-const LIMIT = 10000;
-const CURRENCY = 'РУБ.';
-const STATUS_IN_LIMIT = 'все хорошо';
-const STATUS_OUT_OF_LIMIT = 'все плохо';
-const STATUS_OUT_OF_LIMIT_CLASSNAME = 'status_red';
+const STATUS_IN_LIMIT = 'всё хорошо';
+const STATUS_OUT_OF_LIMIT = 'всё плохо';
 
-const inputNode = document.querySelector('.js-expense-input');
-const buttonNode = document.querySelector('.js-button');
-const historyNode = document.querySelector('.js-history');
-const sumNode = document.querySelector('.js-sum');
-const limitNode = document.querySelector('.js-limit');
-const statusNode = document.querySelector('.js-status');
+const inputNode = document.getElementById("expenseInput");
+const addButtonNode = document.getElementById("addButton");
+const clearButtonNode = document.getElementById("clearButton");
+const limitNode = document.getElementById("limitValue");
+const totalValueNode = document.getElementById("totalValue");
+const statusNode = document.getElementById("statusText");
+const historyList = document.getElementById("historyList");
 
-const expenses = [];
+let expenses = [];
+const limit = parseInt(limitNode.innerText);
 
-init(expenses);
-
-buttonNode.addEventListener('click', function () {
-    const expense = getExpanseFromUser();
-
-    if (!expense) {
-        return
-    }
-    trackExpanse(expense);
-
-    render(expenses);
-});
-
-
-function init(expenses) {
-    limitNode.innerText = LIMIT;
-    statusNode.innerText = STATUS_IN_LIMIT;
-    sumNode.innerText = calculateExpanses(expenses);
-};
-
-function trackExpanse(expense) {
-    expenses.push(expense);
-}
-
-function getExpanseFromUser() {
-    if(!inputNode.value) {
-        return null;
-    }
-
-    const expense = parseInt(inputNode.value);
-
-    clearInput();
-
-    return expense;
-}
-
-function clearInput() {
-    inputNode.value = '';
-}
-
-function calculateExpanses(expenses) {
+const getTotal = () => {
     let sum = 0;
-
-    expenses.forEach(element => {
-        sum += element;
-    });
+    expenses.forEach((expense) => {
+        sum +=expense;
+    }); 
 
     return sum;
-}
+};
 
-function render(expenses) {
-    const sum = calculateExpanses(expenses);
-    
-    renderHistory(expenses);
-    renderSum(sum);
-    renderStatus(sum);
-}
+const renderStatus = () => {
+    const total = getTotal(expenses);
+    totalValueNode.innerText = total;
 
-function renderHistory(expenses) {
-    // 3. Выведем новый список трат
-    let expensesListHTML = '';
-
-    expenses.forEach(element => {
-        expensesListHTML += `<li>${element} ${CURRENCY}</li>`;
-    });
-
-    historyNode.innerHTML = `<ol>${expensesListHTML}</ol>`;
-}
-
-function renderSum(sum) {
-    sumNode.innerText = sum;
-}
-
-function renderStatus(sum) {
-    if(sum <= LIMIT) {
+    if (total <= limit) {
         statusNode.innerText = STATUS_IN_LIMIT;
+        statusNode.className = "stats__statusText_positive"
     } else {
-        statusNode.innerText = STATUS_OUT_OF_LIMIT;
-
-        statusNode.classList.add(STATUS_OUT_OF_LIMIT_CLASSNAME); // добавляем класс элементу, его стиль css прописываю в файле css оописываю его 
+        statusNode.innerText = `${STATUS_OUT_OF_LIMIT} (${limit - total} руб)`;
+        statusNode.className = "stats__statusText_negative";
     }
-}
+};
+
+const renderHistory = () => {
+    historyList.innerHTML = "";
+    expenses.forEach((expense) => {
+        const historyItem = document.createElement("li");
+        historyItem.className = "rub";
+        historyItem.innerText = expense;
+
+        historyList.appendChild(historyItem);
+    });
+};
+
+const render = () => {
+    renderStatus();
+    renderHistory();
+};
+
