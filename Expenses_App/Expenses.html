@@ -24,9 +24,16 @@
                 class="moneyInput__input"
                 type="number"
                 min="1"
-                id="expensesInput"
+                id="expenseInput"
                 >
             </div>
+            <select id="categorySelect" class="categorySelect">  <!-- add 10/11/24 -->
+                <option hidden="" disabled="" selected="" value="Категория">Категория</option>
+                <option value="Продукты">Продукты</option>
+                <option value="Кафе">Кафе и рестораны</option>
+                <option>Квартира</option>
+                <option>Авто</option>
+            </select>
         </div>
 
         <button class="addButton" id="addButton">Добавить</button>
@@ -43,7 +50,7 @@
             <div class="stats__status">
                 <span class="label">Статус:</span>
                 <span class="stats__statusText_positive" id="statusText">
-                    все хорошо
+                    всё хорошо
                 </span>
             </div>
         </div>
