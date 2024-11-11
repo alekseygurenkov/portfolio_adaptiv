@@ -81,6 +81,7 @@ a:hover {
     box-shadow: -15px 0 0 0 var(--primary-color);
 }
 
+/* Контейнер со всеми кликабельными элементами */
 .login-form {
     display: flex;
     flex-direction: column;
@@ -89,14 +90,16 @@ a:hover {
     gap: 1rem;
 }
 
+/* Контейнер с полями ввода */
 .input-wrapper {
     display: flex;
     position: relative;
     flex-direction: column;
 }
 
+/* поле ввода размеры логин и пасс */
 .input-field {
-    width: 100%;
+    box-sizing: border-box;
     padding: 0.5rem;
     border: 2px solid var(--primary-color);
     border-radius: 30px;
