@@ -8,6 +8,17 @@ body {
     background: #ffffff;
 }
 
+.container {
+    margin: 0 auto;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
 button {
     font-family: inherit;
     cursor: pointer;
@@ -15,6 +26,10 @@ button {
 
 button:hover {
     opacity: 0.5;
+}
+
+.zagolovok {
+    text-align: center;
 }
 
 h1 {

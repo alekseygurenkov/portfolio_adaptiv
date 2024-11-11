@@ -16,51 +16,51 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <h1>Учет расходов</h1>
-    <div class="expenses">
-        <div class="expensesInput">
-            <div class="moneyInput rub">
-                <input
-                class="moneyInput__input"
-                type="number"
-                min="1"
-                id="expenseInput"
-                >
+    <div class="container">
+        <h1 class="zagolovok">Учет расходов</h1>
+        <div class="center">
+            <div class="expenses">
+                <div class="expensesInput">
+                    <div class="moneyInput rub">
+                        <input
+                        class="moneyInput__input"
+                        type="number"
+                        min="1"
+                        id="expenseInput"
+                        >
+                    </div>
+                    <select id="categorySelect" class="categorySelect">  <!-- add 10/11/24 -->
+                        <option hidden="" disabled="" selected="" value="Категория">Категория</option>
+                        <option value="Продукты">Продукты</option>
+                        <option value="Кафе">Кафе и рестораны</option>
+                        <option>Квартира</option>
+                        <option>Авто</option>
+                    </select>
+                </div>
+                <button class="addButton" id="addButton">Добавить</button>
+                <div class="stats">
+                    <div class="stats__limit">
+                        <span class="label">Лимит:</span>
+                        <span id="limitValue" class="rub">10000</span>
+                    </div>
+                    <div class="stats__total">
+                        <span class="label">Всего:</span>
+                        <span class="rub" id="totalValue">0</span>
+                    </div>
+                    <div class="stats__status">
+                        <span class="label">Статус:</span>
+                        <span class="stats__statusText_positive" id="statusText">
+                            всё хорошо
+                        </span>
+                    </div>
+                </div>
+                <div class="history">
+                    <div class="history__title label">История</div>
+                    <ol class="history__list" id="historyList"></ol>
+                </div>
+                <button class="clearButton" id="clearButton">Сбросить расходы</button>
             </div>
-            <select id="categorySelect" class="categorySelect">  <!-- add 10/11/24 -->
-                <option hidden="" disabled="" selected="" value="Категория">Категория</option>
-                <option value="Продукты">Продукты</option>
-                <option value="Кафе">Кафе и рестораны</option>
-                <option>Квартира</option>
-                <option>Авто</option>
-            </select>
         </div>
-
-        <button class="addButton" id="addButton">Добавить</button>
-
-        <div class="stats">
-            <div class="stats__limit">
-                <span class="label">Лимит:</span>
-                <span id="limitValue" class="rub">10000</span>
-            </div>
-            <div class="stats__total">
-                <span class="label">Всего:</span>
-                <span class="rub" id="totalValue">0</span>
-            </div>
-            <div class="stats__status">
-                <span class="label">Статус:</span>
-                <span class="stats__statusText_positive" id="statusText">
-                    всё хорошо
-                </span>
-            </div>
-        </div>
-
-        <div class="history">
-            <div class="history__title label">История</div>
-            <ol class="history__list" id="historyList"></ol>
-        </div>
-
-        <button class="clearButton" id="clearButton">Сбросить расходы</button>
     </div>
     <script src="main.js"></script>
 </body>
