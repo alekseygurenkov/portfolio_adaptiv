@@ -97,6 +97,7 @@ ol {
 }
 
 .addButton {
+    height: 58px;
     display: block;
     padding: 10px 110px;
     font-size: inherit;
@@ -131,6 +132,18 @@ ol {
 
 .stats__statusText_positive {
     color: #039000;
+}
+
+.stats__changeLimitBtn {
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.stats__changeLimitBtn:hover {
+    box-shadow: 0 0 5px #FF0000, 
+    0 0 25px #FF0000;
 }
 
 .history {
